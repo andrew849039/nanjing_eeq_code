@@ -1,0 +1,32 @@
+project:
+  name: nanjing_eeq
+  root: .
+
+data:
+  patch_dir: data/processed/patches/rgbn_strict
+  patch_tag: rgbn_strict
+  feature_stats_path: data/processed/patches/rgbn_strict/feature_stats.json
+  patch_size: 32
+  channels: 4
+  feature_keys: [B2, B3, B4, B8]
+
+training:
+  device: cuda
+  batch_size: 64
+  num_workers: 4
+  epochs: 12
+  patience: 6
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  selection_metric: score
+  seed: 42
+  amp: true
+
+model:
+  base_channels: 32
+  mlp_hidden_dims: [1024, 256]
+
+outputs:
+  metrics_root: outputs/metrics
+  checkpoint_root: outputs/checkpoints
