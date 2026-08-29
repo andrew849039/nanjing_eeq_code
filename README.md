@@ -1,6 +1,6 @@
-# Nanjing EEQ Spatial-Context Modeling
+# EEQ Spatial-Context Modeling
 
-This repository contains the reproducible code workflow for estimating ecological environment quality (EEQ) in Nanjing under a reduced RGBN input setting. The package includes data-layout checks, patch-based deep learning training, tabular baseline training, DEM ablation, and metric summarization.
+This repository contains the reproducible code workflow for estimating ecological environment quality (EEQ) under a reduced RGBN input setting. The package includes data-layout checks, patch-based deep learning training, tabular baseline training, DEM ablation, and metric summarization.
 
 No remote-sensing rasters, patch arrays, prediction tables, or trained model weights are included in this code release.
 
