@@ -12,20 +12,20 @@ data:
 
 training:
   device: cuda
-  batch_size: 64
+  batch_size: 512
   num_workers: 4
   epochs: 12
   patience: 6
   lr: 0.001
   weight_decay: 0.0001
-  optimizer: adamw
+  optimizer: adam
   selection_metric: score
   seed: 42
   amp: true
 
 model:
   base_channels: 32
-  mlp_hidden_dims: [1024, 256]
+  mlp_hidden_dims: [1776, 256, 136]
 
 outputs:
   metrics_root: outputs/metrics

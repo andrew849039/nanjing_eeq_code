@@ -99,9 +99,9 @@ def build_model(config: RunConfig) -> nn.Module:
 
 
 def build_optimizer(model: nn.Module, config: RunConfig) -> torch.optim.Optimizer:
-    if config.optimizer.lower() == "adam":
-        return torch.optim.Adam(model.parameters(), lr=config.lr, weight_decay=config.weight_decay)
-    return torch.optim.AdamW(model.parameters(), lr=config.lr, weight_decay=config.weight_decay)
+    if config.optimizer.lower() != "adam":
+        raise ValueError(f"Unsupported optimizer: {config.optimizer}")
+    return torch.optim.Adam(model.parameters(), lr=config.lr, weight_decay=config.weight_decay)
 
 def make_loaders(
     patch_dir: Path,

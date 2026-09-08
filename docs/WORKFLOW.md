@@ -15,7 +15,7 @@ python scripts/train/train_patch_models.py --model patch_mlp --config configs/pr
 python scripts/train/train_patch_models.py --model plain_unet --config configs/project.yaml
 ```
 
-`patch_mlp` provides a non-spatial neural baseline. `plain_unet` provides the spatial-context baseline used in the manuscript.
+`patch_mlp` provides a non-spatial neural baseline. `plain_unet` provides the main spatial-context baseline.
 
 ## 3. Train Tabular Baselines
 
